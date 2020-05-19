@@ -1,44 +1,53 @@
-html{
+html {
     font-size: 15px;
 }
-.menu-btn{
+
+.menu-btn {
     position: absolute;
     z-index: 3;
-    right:35px;
-    top:35px;
+    right: 35px;
+    top: 35px;
     cursor: pointer;
     transition: all 0.5s ease-out;
 }
-.menu-btn .btn-line{
+
+.menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: white;
     transition: all 0.5s ease-out;
 }
-.menu-btn.close{
+
+.menu-btn.close {
     transform: rotate(180deg);
 }
-.menu-btn.close .btn-line:nth-child(1){
-    transform: rotate(45deg) translate(5px,5px);
-}
-.menu-btn.close .btn-line:nth-child(2){
-    opacity: 0;
-}
-.menu-btn.close .btn-line:nth-child(3){
-    transform: rotate(-45deg) translate(7px,-6px);
+
+.menu-btn.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
-.menu{
+.menu-btn.close .btn-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.menu {
     position: fixed;
     top: 0;
     width: 100%;
     visibility: hidden;
 }
-.menu.show{
+
+.menu.show {
     visibility: visible;
 }
-.menu-branding, .menu-nav{
+
+.menu-branding,
+.menu-nav {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -48,45 +57,54 @@ html{
     height: 100vh;
     overflow: hidden;
 }
-.menu-nav{
+
+.menu-nav {
     opacity: 0.9;
     margin: 0;
     padding: 0;
     background: black;
     list-style: none;
-    transform: translate3d(0,-100%,0);
+    transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out;
 }
-.menu-nav.show{
-    transform: translate3d(0,0,0);
+
+.menu-nav.show {
+    transform: translate3d(0, 0, 0);
 }
-.menu-branding{
+
+.menu-branding {
     background: black;
-    transform: translate3d(0,100%,0);
+    transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out;
 }
-.menu-branding.show{
-    transform: translate3d(0,0,0);
+
+.menu-branding.show {
+    transform: translate3d(0, 0, 0);
 }
-.menu-branding .portrait{
-      width: 250px;
-      height: 250px;
-      background: url("../img/profil.JPG.jpg");
-      border-radius: 50%;
-      background-position:-50px,-200px;
+
+.menu-branding .portrait {
+    width: 250px;
+    height: 250px;
+    background: url("../img/profil.JPG.jpg");
+    border-radius: 50%;
+    background-position: -50px, -200px;
 }
-.menu .nav-item{
-transform: translate3d(660px,0,0);
-transition: all 0.5s ease-out;
+
+.menu .nav-item {
+    transform: translate3d(660px, 0, 0);
+    transition: all 0.5s ease-out;
 }
-.menu .nav-item.show{
-    transform: translate3d(0,0,0);
+
+.menu .nav-item.show {
+    transform: translate3d(0, 0, 0);
 }
-.menu .nav-item.current > a{
+
+.menu .nav-item.current>a {
     border: 3px;
     color: red;
 }
-.menu .nav-link{
+
+.menu .nav-link {
     display: inline-block;
     position: relative;
     font-size: 30px;
@@ -97,23 +115,28 @@ transition: all 0.5s ease-out;
     color: #fff;
     transition: all 0.5s ease-out;
 }
-.nav-item:nth-child(1){
+
+.nav-item:nth-child(1) {
     transition-delay: 0.1s;
 }
-.nav-item:nth-child(2){
+
+.nav-item:nth-child(2) {
     transition-delay: 0.2s;
 }
-.nav-item:nth-child(3){
+
+.nav-item:nth-child(3) {
     transition-delay: 0.3s;
 }
-.nav-item:nth-child(4){
+
+.nav-item:nth-child(4) {
     transition-delay: 0.4s;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     background: black;
     color: #fff;
     height: 100%;
@@ -121,200 +144,456 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.5;
 }
-h1,h2,h3{
+
+h1,
+h2,
+h3 {
     margin: 0;
     font-weight: 400;
 }
-h1.lg-heading,h2.lg-heading,h3.lg-heading{
+
+h1.lg-heading,
+h2.lg-heading,
+h3.lg-heading {
     font-size: 5rem;
 }
-h1.sm-heading,h2.sm-heading,h3.sm-heading{
+
+h1.sm-heading,
+h2.sm-heading,
+h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5);
 }
-a{
-    color:darkgreen;
+
+a {
+    color: darkgreen;
     text-decoration: none;
 }
-header{
+
+header {
     position: fixed;
     z-index: 2;
     width: 100%;
 }
-.text-secondary{
+
+.text-secondary {
     color: darkgreen;
 }
-.text-third{
+
+.text-third {
     color: darkgreen;
 }
-main{
+
+main {
     padding: 4rem;
     min-height: calc(100vh - 60px);
 }
-main .icons{
+
+main .icons {
     margin-top: 1rem;
 }
-main .icons a{
+
+main .icons a {
     padding: 0.4rem;
 }
-main .icons a:hover{
+
+main .icons a:hover {
     color: blue;
     transition: all 0.5 ease-out;
 }
-main#home{
+
+main#home {
     overflow: hidden;
 }
-main#home h1{
+
+main#home h1 {
     margin-top: 20vh;
 }
-.about-info{
+
+.about-info {
     display: grid;
     grid-gap: 30px;
     grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
-    grid-template-columns: repeat(3,lfr);
+    grid-template-columns: repeat(3, lfr);
 }
-.about-info .prof{
+
+.about-info .prof {
     grid-area: bio;
     font-size: 1.5rem;
 }
-.about-info .job-1{
+
+.about-info .job-1 {
     grid-area: job1;
 }
+
 .about-info .job-2 {
-    grid-area: job2; 
+    grid-area: job2;
 }
+
 .about-info .job-3 {
-    grid-area: job3; 
+    grid-area: job3;
 }
+
 .about-info .job {
     background: indigo;
     opacity: 0.7;
     padding: 0.5rem;
     border-bottom: solid 5px darkred;
-    border-top: solid 5px darkred;  
+    border-top: solid 5px darkred;
     transition: all 0.5s ease-out;
 }
-.about-info .job:hover{
+
+.about-info .job:hover {
     background: darkred;
     opacity: 0.7;
     padding: 0.5rem;
     border-bottom: solid 5px darkgreen;
-    border-top: solid 5px darkgreen;  
+    border-top: solid 5px darkgreen;
 }
-.prof-img{
-    grid-area:bioimage;
-    margin:auto;
+
+.prof-img {
+    grid-area: bioimage;
+    margin: auto;
     border-radius: 50%;
-    border-bottom:green 3px solid;
-    border-top:green 3px solid;
-    border-left:darkred 3px solid;
-    border-right:darkred 3px solid;
+    border-bottom: green 3px solid;
+    border-top: green 3px solid;
+    border-left: darkred 3px solid;
+    border-right: darkred 3px solid;
     height: 200px;
     width: 200px;
 }
 
-.project{
+.project {
     display: grid;
-    grid-gap:0.7rem;
+    grid-gap: 0.7rem;
     grid-template-columns: repeat(4, 1fr);
 }
-.project img{
-    width:100%;
+
+.project img {
+    width: 100%;
     border: 3px white solid;
     min-height: 4em;
 }
-.project img:hover{
-    opacity:0.5;
+
+.project img:hover {
+    opacity: 0.5;
     border-color: darkred;
     transition: all 0.5s ease-out;
 }
-.btn, .btn-dark, .btn-light{
+
+.btn,
+.btn-dark,
+.btn-light {
     display: block;
     padding: 0.5rem 1rem;
     border: 0;
     margin-bottom: 0.3rem;
 }
-.btn:hover, .btn-dark:hover, .btn-light:hover{
+
+.btn:hover,
+.btn-dark:hover,
+.btn-light:hover {
     background: darkslategray;
     color: deeppink;
 }
-.btn-light{
+
+.btn-light {
     background: black;
     color: darkred;
 }
-.boxes{
+
+.boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-top:1rem;
+    margin-top: 1rem;
 }
-.boxes div{
+
+.boxes div {
     font-size: 1rem;
-    border:solid white 3px;
+    border: solid white 3px;
     padding: 1rem 2rem;
     margin-bottom: 3rem;
     transition: all 0.5s ease-out;
 }
-.boxes div:hover{
+
+.boxes div:hover {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
-    background:black;
+    background: black;
     color: darkblue;
 }
-.boxes div:hover span{
+
+.boxes div:hover span {
     color: red;
 }
-#main-footer{
+
+#main-footer {
     text-align: center;
     padding: 1rem;
     background: #2b2b2b;
     height: 60px;
 }
-#particle-js{
+
+#particle-js {
     position: absolute;
     width: 100%;
     height: auto;
     z-index: -1;
 }
 
-#motive{
+#motive {
     color: red;
 }
 
+
 /* UWUU */
 
-.gallery{
+.gallery {
     margin: 10px 50px;
 }
-.gallery img{
+
+.gallery img {
     transition: 1;
     padding: 15px;
     width: 200px;
 }
-.gallery img:hover{
+
+.gallery img:hover {
     filter: grayscale(100%);
     transform: scale(1.1);
 }
 
-td{
+td {
     border-top: solid darkred 3px;
     border-bottom: solid darkred 3px;
     background-color: black;
 }
-#td1:hover{
+
+#td1:hover {
     background-color: rgb(86, 7, 105);
     border-top: solid darkgreen 3px;
     border-bottom: solid darkgreen 3px;
 }
-#td2:hover{
+
+#td2:hover {
     background-color: darkred;
     border-top: solid darkgreen 3px;
     border-bottom: solid darkgreen 3px;
 }
-#td3:hover{
+
+#td3:hover {
     background-color: rgb(9, 0, 58);
     border-top: solid darkgreen 3px;
     border-bottom: solid darkgreen 3px;
+}
+
+
+/* penguin */
+
+:root {
+    --penguin-size: 100px;
+    --penguin-skin: rgb(0, 149, 168);
+    --penguin-belly: white;
+    --penguin-beak: darkred;
+}
+
+@media (max-width: 100px) {
+     :root {
+        /* Only change code below this line */
+        --penguin-size: 100px;
+        --penguin-skin: black;
+        /* Only change code above this line */
+    }
+}
+
+.penguin {
+    position: relative;
+    float: right;
+    display: block;
+    /* margin-top: 5%; */
+    width: var(--penguin-size, 100px);
+    height: var(--penguin-size, 100px);
+}
+
+.right-cheek {
+    top: 15%;
+    left: 35%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+}
+
+.left-cheek {
+    top: 15%;
+    left: 5%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+}
+
+.belly {
+    top: 60%;
+    left: 2.5%;
+    background: var(--penguin-belly, white);
+    width: 95%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100%;
+}
+
+.penguin-top {
+    top: 10%;
+    left: 25%;
+    background: var(--penguin-skin, gray);
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+}
+
+.penguin-bottom {
+    top: 40%;
+    left: 23.5%;
+    background: var(--penguin-skin, gray);
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+}
+
+.right-hand {
+    top: 5%;
+    left: 25%;
+    background: var(--penguin-skin, black);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(130deg);
+    z-index: -1;
+    animation-duration: 3s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin: 0% 0%;
+    animation-timing-function: linear;
+}
+
+@keyframes wave {
+    10% {
+        transform: rotate(110deg);
+    }
+    20% {
+        transform: rotate(130deg);
+    }
+    30% {
+        transform: rotate(110deg);
+    }
+    40% {
+        transform: rotate(130deg);
+    }
+}
+
+.left-hand {
+    top: 0%;
+    left: 75%;
+    background: var(--penguin-skin, gray);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+.right-feet {
+    top: 85%;
+    left: 60%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2222;
+}
+
+.left-feet {
+    top: 85%;
+    left: 25%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2222;
+}
+
+.right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+}
+
+.left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+}
+
+.sparkle {
+    top: 25%;
+    left: -23%;
+    background: white;
+    width: 150%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.blush-right {
+    top: 65%;
+    left: 15%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+.blush-left {
+    top: 65%;
+    left: 70%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+.beak-top {
+    top: 60%;
+    left: 40%;
+    background: var(--penguin-beak, orange);
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+.beak-bottom {
+    top: 65%;
+    left: 42%;
+    background: var(--penguin-beak, orange);
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+.penguin * {
+    position: absolute;
+}
+
+.clear {
+    clear: both;
 }
