@@ -597,3 +597,26 @@ td {
 .clear {
     clear: both;
 }
+
+
+@media screen and (max-width: 780px) {
+    
+    .container {
+        width: 100%;
+    }
+    .left {
+        width: 25%;
+        background-color: #89d0ff;
+    }
+    .middle {
+        width: 68%;
+        float: right;
+    }
+    
+    .right {
+        clear: both;
+        padding: 1% 4%;
+        width: auto;
+        float: none;
+    }
+}
